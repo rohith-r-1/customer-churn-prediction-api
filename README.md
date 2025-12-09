@@ -173,4 +173,32 @@ High-level steps (implemented in the notebooks):
      - Return churn probability and class based on threshold.
    - Wrap with Flask (`app.py`).
 
+## 7. Model & Data Artifacts
+
+The inference pipeline in `src/inference.py` expects the following files:
+
+- `data/processed_data.pkl`  
+  - A dictionary created by the training notebooks containing:
+    - `X_train`, `X_test`, `y_train`, `y_test`
+    - `feature_names` (list of all final feature columns)
+    - `scaler` (fitted `StandardScaler` for numeric features)
+
+- `models/best_model.pkl`  
+  - The trained classifier (XGBoost or whatever model performed best).
+
+- `models/decision_threshold.txt`  
+  - A text file with a single floating-point number: the optimal churn probability threshold chosen from the business cost analysis.
+
+These are produced by the notebooks in `notebooks/`:
+
+1. Training notebook:
+   - Builds features, splits data.
+   - Fits the scaler and model.
+   - Saves `data/processed_data.pkl` and `models/best_model.pkl`.
+
+2. Business threshold notebook:
+   - Scans decision thresholds using a custom cost function.
+   - Saves the chosen value to `models/decision_threshold.txt`.
+
+To run the API successfully, make sure these files exist in the expected paths.
 
