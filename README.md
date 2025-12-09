@@ -193,3 +193,6 @@ These are produced by the notebooks in `notebooks/`:
 
 To run the API successfully, make sure these files exist in the expected paths.
 
+---
+## Author
+Author: Rohith R
