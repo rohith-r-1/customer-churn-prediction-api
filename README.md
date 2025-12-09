@@ -36,7 +36,6 @@ The goal is to:
 
 ## 4. Repository Structure
 
-.
 ├── app.py # Flask app exposing the churn prediction endpoint
 ├── notebooks/ # EDA, modeling, SHAP, threshold tuning
 │ ├── 01_eda_feature_engineering.ipynb
