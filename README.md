@@ -37,14 +37,23 @@ The goal is to:
 ## 4. Repository Structure
 
 ├── app.py # Flask app exposing the churn prediction endpoint
+
 ├── notebooks/ # EDA, modeling, SHAP, threshold tuning
+
 │ ├── 01_eda_feature_engineering.ipynb
+
 │ ├── 02_modeling_evaluation.ipynb
+
 │ ├── 03_interpretability_shap.ipynb
+
 │ └── 04_business_threshold.ipynb
+
 ├── src/
+
 │ └── inference.py # Unified preprocessing + model loading + prediction
+
 ├── data/ # (optional) data and processed artifacts
+
 └── models/ # (optional) trained model + scaler + threshold
 
 
@@ -70,10 +79,12 @@ pip install -r requirements.txt
 From the project root:
 
 .venv\Scripts\activate
+
 python app.py
 
 
 You should see something like:
+
 Running on http://127.0.0.1:5000
 
 
