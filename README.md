@@ -35,27 +35,18 @@ The goal is to:
 - Flask (API)
 
 ## 4. Repository Structure
-
+'''
 ├── app.py # Flask app exposing the churn prediction endpoint
-
 ├── notebooks/ # EDA, modeling, SHAP, threshold tuning
-
 │ ├── 01_eda_feature_engineering.ipynb
-
 │ ├── 02_modeling_evaluation.ipynb
-
 │ ├── 03_interpretability_shap.ipynb
-
 │ └── 04_business_threshold.ipynb
-
 ├── src/
-
 │ └── inference.py # Unified preprocessing + model loading + prediction
-
 ├── data/ # (optional) data and processed artifacts
-
 └── models/ # (optional) trained model + scaler + threshold
-
+'''
 
 > Note: `data/` and `models/` may be `.gitignored` if they contain large or private files.  
 > The project assumes you have `processed_data.pkl`, `best_model.pkl`, and `decision_threshold.txt` from the training notebooks.
